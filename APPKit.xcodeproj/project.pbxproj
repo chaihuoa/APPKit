@@ -15,10 +15,20 @@
 		DACB28C921F876CC00C52545 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DACB28C721F876CC00C52545 /* Main.storyboard */; };
 		DACB28CB21F876DA00C52545 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DACB28CA21F876DA00C52545 /* Assets.xcassets */; };
 		DACB28CE21F876DA00C52545 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DACB28CC21F876DA00C52545 /* LaunchScreen.storyboard */; };
+		DACB28F021F87A3E00C52545 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACB28EF21F87A3E00C52545 /* MasterViewController.swift */; };
+		DACB28F321F9CA4800C52545 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACB28F221F9CA4800C52545 /* UIView+Utils.swift */; };
+		DACB28F721F9D6CE00C52545 /* APPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DACB28A321F8759200C52545 /* APPKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		DACB28AE21F8759200C52545 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DACB289A21F8759200C52545 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DACB28A221F8759200C52545;
+			remoteInfo = APPKit;
+		};
+		DACB28F421F9D6B700C52545 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DACB289A21F8759200C52545 /* Project object */;
 			proxyType = 1;
@@ -45,6 +55,8 @@
 		DACB28DA21F876E100C52545 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DACB28E321F876E100C52545 /* APPKitDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APPKitDemoUITests.swift; sourceTree = "<group>"; };
 		DACB28E521F876E100C52545 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DACB28EF21F87A3E00C52545 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		DACB28F221F9CA4800C52545 /* UIView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DACB28F721F9D6CE00C52545 /* APPKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +95,7 @@
 				DACB28D721F876E100C52545 /* APPKitDemoTests */,
 				DACB28E221F876E100C52545 /* APPKitDemoUITests */,
 				DACB28A421F8759200C52545 /* Products */,
+				DACB28F621F9D6CE00C52545 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +112,8 @@
 		DACB28A521F8759200C52545 /* APPKit */ = {
 			isa = PBXGroup;
 			children = (
+				DACB28F821FAB1C900C52545 /* Views */,
+				DACB28F121F9CA2800C52545 /* Utilities */,
 				DACB28A621F8759200C52545 /* APPKit.h */,
 				DACB28A721F8759200C52545 /* Info.plist */,
 			);
@@ -117,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				DACB28C321F876CC00C52545 /* AppDelegate.swift */,
+				DACB28EF21F87A3E00C52545 /* MasterViewController.swift */,
 				DACB28C521F876CC00C52545 /* ViewController.swift */,
 				DACB28C721F876CC00C52545 /* Main.storyboard */,
 				DACB28CA21F876DA00C52545 /* Assets.xcassets */,
@@ -142,6 +159,28 @@
 				DACB28E521F876E100C52545 /* Info.plist */,
 			);
 			path = APPKitDemoUITests;
+			sourceTree = "<group>";
+		};
+		DACB28F121F9CA2800C52545 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				DACB28F221F9CA4800C52545 /* UIView+Utils.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		DACB28F621F9D6CE00C52545 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DACB28F821FAB1C900C52545 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +244,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				DACB28F521F9D6B700C52545 /* PBXTargetDependency */,
 			);
 			name = APPKitDemo;
 			productName = APPKitDemo;
@@ -223,6 +263,7 @@
 				TargetAttributes = {
 					DACB28A221F8759200C52545 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					DACB28AB21F8759200C52545 = {
 						CreatedOnToolsVersion = 10.1;
@@ -284,6 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DACB28F321F9CA4800C52545 /* UIView+Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +343,7 @@
 			files = (
 				DACB28C621F876CC00C52545 /* ViewController.swift in Sources */,
 				DACB28C421F876CC00C52545 /* AppDelegate.swift in Sources */,
+				DACB28F021F87A3E00C52545 /* MasterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +354,11 @@
 			isa = PBXTargetDependency;
 			target = DACB28A221F8759200C52545 /* APPKit */;
 			targetProxy = DACB28AE21F8759200C52545 /* PBXContainerItemProxy */;
+		};
+		DACB28F521F9D6B700C52545 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DACB28A221F8759200C52545 /* APPKit */;
+			targetProxy = DACB28F421F9D6B700C52545 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -459,6 +507,7 @@
 		DACB28B821F8759200C52545 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -475,6 +524,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.appkit.APPKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -483,6 +533,7 @@
 		DACB28B921F8759200C52545 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -507,6 +558,7 @@
 		DACB28BB21F8759200C52545 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = APPKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -524,6 +576,7 @@
 		DACB28BC21F8759200C52545 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = APPKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
