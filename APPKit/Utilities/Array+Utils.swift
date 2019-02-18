@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+public extension Array where Element: Equatable {
+    @discardableResult
+    public mutating func remove(_ element: Element) -> Index? {
+        guard let index = index(of: element) else { return nil }
+        remove(at: index)
+
+        return index
+    }
+}
